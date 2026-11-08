@@ -42,6 +42,16 @@ This is your tutor harness. It's yours to read and change. This page says which 
 
 **The hook** runs whenever a tutor session starts, resumes, or comes back from a compaction, from the course folder's own settings. It tells the tutor where its course stands: the "Where we are" note, the newest lesson, and your newest reply. Rules never come from the hook. They're always in the `CLAUDE.md` files.
 
+## Your sessions, in Berth
+
+Berth is the list of every agent session on your Mac, filed in folders, and the way you start, wake, fork and compact them. Your harness uses it like this:
+- **Each tutor is a Berth session in its course's folder,** titled with the course's session name and filed in the Berth folder `Tutor/`. `new-course` starts it there. A tutor started anywhere else loads the wrong rules.
+- **To continue a course,** wake its session in Berth, or start a new one in the course folder. The files are the memory, so either works.
+- **Forks are for experiments,** such as "what would this tutor do at hand-holding 2?", never for starting a tutor. A fork carries its parent's whole conversation into the new session.
+- **Compact a session through Berth,** never by pasting `/compact` into it. A pasted `/compact` arrives as an ordinary message, and the session may take the note as its job.
+- **A prompt or a message.** A prompt placed in a session's input box is read as you speaking: it starts or redirects the work. A message from another agent runs alongside the work. Use a prompt only when you mean to steer.
+- **Sessions are yours to close.** The keeper lists, starts and files them; waking, sleeping and closing are your calls.
+
 ## Words you'll meet
 
 - **Harness:** everything around a model that shapes what it does: its rules, tools, hooks, skills, settings and records. This folder is one.
@@ -52,4 +62,6 @@ This is your tutor harness. It's yours to read and change. This page says which 
 - **Skill:** a packaged set of instructions an agent loads when a task matches its description.
 - **Transcript:** the full record of a session, saved in `~/.claude/projects/`. `tools/tx.py` makes one readable.
 - **Orchestrator:** an agent, or a person, that runs other agents: setting their rules, checking their work, and changing them when they fail. In this harness, that's you, with the harness keeper to help.
+- **Berth:** the list of your agent sessions, in folders, and the way you start, wake, fork and compact them.
+- **Fork:** a new session that starts with a copy of another session's whole conversation.
 - **Slider:** a 0–10 setting in a course's header, for hand-holding, education or exploration. It's the safest knob to turn first.

@@ -1,5 +1,15 @@
 # Changes
 
+## 0.2.2 · 2026-11-07 · Your harness runs on Berth
+
+- **`harness/CLAUDE.md`:** the keeper starts each course's tutor through `new-course`, as a Berth session in that course's folder, never elsewhere or by forking. It lists and files your sessions, and waking, sleeping and closing them stay your calls. The rulebook is still under its 1,500-word budget.
+- **`harness/HARNESS.md`:** a new section, "Your sessions, in Berth", and two new terms, Berth and fork.
+- **`ROADMAP.md`:**
+  - after "Meet your harness", you file your sessions in Berth folders;
+  - the M4 audit reads Berth's list of your sessions, and you compact through Berth;
+  - the capstone starts with one fork on purpose.
+- **Still to come:** the bundled Berth kit, the tutor harness install, the store kit, and "Meet your harness".
+
 ## 0.2.1 · 2026-11-07 · Fixes before the Berth kit is bundled
 
 - **`SETUP.md`:**

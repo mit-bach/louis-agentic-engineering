@@ -106,6 +106,7 @@ These estimates are for full days of work.
 ### Course 00 · Meet your harness (half a day)
 - **Lesson 1:** you read the harness's map, predict which file controls three behaviours, and check.
 - **Lesson 2:** you move one of the tutor's settings (a slider), predict how the next lesson changes, and compare.
+- **Then:** you file your sessions in Berth folders, one per course.
 
 ### M0 · Setup, and an agent that follows your rules (half a day)
 - **What works:**
@@ -178,7 +179,7 @@ These estimates are for full days of work.
   - where does the total come from?
 - **Agent-first:** the checkout tool.
   - **Prediction:** two agents are told to buy the last unit at once. What does the losing agent tell its customer?
-- **Harness:** you audit your own tutor harness. You read your rule log and two session transcripts, and write half a page on which changes held and which didn't. If you haven't changed a rule yet, the audit has to produce one change.
+- **Harness:** you audit your own tutor harness. You read your rule log, Berth's list of your sessions and two session transcripts. Then you write half a page on which changes held and which didn't. If you haven't changed a rule yet, the audit has to produce one change. You also compact a session through Berth for the first time.
 - **Done:**
   1. **`make check M=4` passes.** It covers:
      - a normal checkout;
@@ -224,7 +225,8 @@ These estimates are for full days of work.
   3. **In your journal:** where the token is kept and sent, and one thing you changed in your agent's work, and why.
 
 ### Capstone · A harness of your own
-You build a small harness from scratch for one optional spec of your choice, using what you kept and dropped from your tutor harness.
+1. **First, one fork on purpose.** You fork one course's tutor into your other course's folder. Predict what it does, then watch it carry the first course's conversation into a folder whose rules say otherwise. It's a lesson about context, and why tutors never start as forks.
+2. **Then your own harness.** You build a small harness from scratch for one optional spec of your choice, using what you kept and dropped from your tutor harness.
 
 ### Finished means
 - From a fresh copy of your repo, every check passes.
@@ -242,8 +244,8 @@ You build a small harness from scratch for one optional spec of your choice, usi
 ## Your tutor harness, in short
 
 Your tutor harness lives in one folder, `~/tutor/`, and it's yours.
-- **Tutors:** each course gets a tutor, which is a Claude Code session started in that course's folder.
-- **The harness keeper:** a session started in the harness folder itself. It helps you change the harness.
+- **Tutors:** each course gets a tutor. It's a Claude Code session in that course's folder, started for you as a Berth session and filed in Berth's `Tutor/` folder.
+- **The harness keeper:** a session started in the harness folder itself. It helps you change the harness, and it lists, starts and files your sessions. Waking, sleeping and closing them stay your calls.
 
 When a tutor does something you don't like, you're the one who fixes it:
 1. You guess which rule caused it, and check.

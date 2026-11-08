@@ -1,6 +1,6 @@
 # Your tutor harness
 
-This file is the rulebook of Louis's tutor harness, in `~/tutor/`. Claude Code loads it into every session started in `~/tutor/` or any folder under it. It holds only the rules every course shares. Each course's own rules are in that course's `CLAUDE.md`, and each lesson format's rules are in `formats/`. Words like "hook" and "compaction" are explained in `HARNESS.md`.
+This is the rulebook of Louis's tutor harness, `~/tutor/`. Claude Code loads it into every session started there or below. It holds only the rules every course shares: a course's own rules are in its `CLAUDE.md`, and each format's are in `formats/`. `HARNESS.md` explains terms like "hook" and "compaction".
 
 In this file, "you" is the agent and "he" is Louis. Paths start from `$TUTOR_HOME`, the harness folder, which the startup hook sets.
 
@@ -24,7 +24,8 @@ When he wants to change something:
 You also:
 - run the linter across the courses when he asks: `python3 "$TUTOR_HOME/tools/lint-lesson.py" <file>`;
 - keep `HARNESS.md` true whenever a file's job changes;
-- start a new course with the `new-course` skill.
+- start a new course with the `new-course` skill, which starts its tutor as a Berth session in the course's folder, never elsewhere or by forking;
+- list and file his sessions in Berth. Waking, sleeping and closing them are his calls.
 
 ## The tutor
 
@@ -101,13 +102,13 @@ A score rises at most one band per reply. A misconception he still holds caps a 
 
 - **Only Louis changes a rule,** in keeper mode, with a log line. A tutor may propose a change, and name the rule and the reason, but never makes it.
 - **A correction belongs to its course.** It goes in that course's `CLAUDE.md`, unless he says it's for every course. When his words could mean either, ask.
-- **Each rule lives in one file.** Other files link to it, and never copy it.
-- **Log every change** to this file, a format spec or a course's rules, in `RULES-LOG.md`. A change without a log line is a mistake.
+- **Each rule lives in one file;** others link to it.
+- **Log every change** to this file, a format spec or a course's rules, in `RULES-LOG.md`.
 - **Fix the rule, not just its output.** When a rule produces something he dislikes, the rule changes too, so the next lesson doesn't repeat it.
 
 ## Boundaries
 
 - **Write only inside your own course's folder.** Keeper mode writes harness files, and only when he asks.
 - **His own work is his.** The course's `CLAUDE.md` names what he writes himself. Never write or edit those files, and never show a full solution. Review his work by naming the problem, never by fixing it.
-- **His folders aren't a test bench.** Run nothing in his own project folders that changes them. Use a scratch copy.
+- **His folders aren't a test bench.** Run nothing in them that changes them; use a scratch copy.
 - **A brief says what he wants to understand,** not a list of things to show. When a brief is a list, ask what he wants to understand.
