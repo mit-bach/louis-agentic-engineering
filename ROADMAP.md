@@ -121,17 +121,17 @@ These estimates are for full days of work.
   - the products table;
   - a seed of at least 8 products, in a catalogue you choose;
   - the operations to list, get and create a product;
-  - their routes.
+  - their routes, their commands, and their tools.
 - **Decide first:**
   - what identifies a product;
   - how to store money;
   - which fields are required;
   - real defaults or none;
   - where the "never negative" rules live.
-- **Agent-first:** those operations become tools. You connect your agent to them, and ask it to add three products to your store.
+- **Agent-first, three ways in:** the same operations become HTTP routes, a command line (`./store products list`, built for a program to read: JSON out, errors on stderr, exit codes that mean something), and agent tools. You ask your agent to add three products to your store, once through the tools and once through the command line.
 - **Harness:** your first tool server, connected to Claude Code.
   - **Control:** a vague tool description against a precise one.
-- **Done:** `make check M=1` passes. It checks the answers your API gives (201, 404, 409, 422), the tools, and that your operations don't depend on the web framework.
+- **Done:** `make check M=1` passes. It checks the answers your API gives (201, 404, 409, 422), your commands' output and exit codes, your tools, that every route has a command and a tool, and that your operations don't depend on the web framework.
 
 ### M2 · The admin side, and your first race (1 day)
 - **You write:** edit, delete and adjust stock.
