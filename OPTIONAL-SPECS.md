@@ -28,3 +28,5 @@ Pick any of these, in any order, once the main path is done or alongside it. Eac
     - *Needs:* an AWS account, and it costs money.
 13. **A race-runner subagent.** A subagent runs the race test and its control, and reports back in three lines.
     - *Works when:* you can say what it saw that your main session didn't, and the other way round.
+14. **Your own migration runner.** A `migrate.py` that records which migrations have run, with a checksum for each, and refuses to run when an applied file was edited afterwards. It's the classic way of keeping a database's schema in step with its code.
+    - *Works when:* new files apply once, in order; an edited old file stops it with a clear message; two runs at once can't both apply the same file.

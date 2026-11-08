@@ -1,5 +1,11 @@
 # Changes
 
+## 0.7.2 · 2026-11-08 · Store milestone M2
+
+- **The store kit** now has M2: archiving, editing, adjusting stock, your first race, and the wall on both sides. You get it with `make update` in `~/code/store`.
+- **`ROADMAP.md`:** M2 takes about 2 days.
+- **`OPTIONAL-SPECS.md`:** a new spec, your own migration runner.
+
 ## 0.7.0 · 2026-11-08 · Your first course: the store kit
 
 - **New repository:** [`mit-bach/louis-store`](https://github.com/mit-bach/louis-store), the store kit, with milestones M0 and M1. Every operation is reachable over HTTP, from the command line, and as an agent tool.

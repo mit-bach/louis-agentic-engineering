@@ -133,7 +133,7 @@ These estimates are for full days of work.
   - **Control:** a vague tool description against a precise one.
 - **Done:** `make check M=1` passes. It checks the answers your API gives (201, 404, 409, 422), your commands' output and exit codes, your tools, that every route has a command and a tool, and that your operations don't depend on the web framework.
 
-### M2 · The admin side, and your first race (1 day)
+### M2 · The admin side, and your first race (2 days)
 - **You write:** edit, delete and adjust stock.
 - **Decide first:**
   - delete a product, or archive it, given that orders will point at products;
@@ -237,7 +237,7 @@ These estimates are for full days of work.
   - the two-window test;
   - three questions answered without notes.
 
-**About 10 to 11 working days in all.**
+**About 11 to 12 working days in all.**
 
 ---
 
