@@ -1,5 +1,9 @@
 # Changes
 
+## 0.3.4 · 2026-11-07 · Every repository it uses, linked
+
+- **`README.md`:** a new section, "Repositories this uses". It links this repository and the Berth kit's, says where cmux comes from, and will list the store kit's repository once it exists.
+
 ## 0.3.3 · 2026-11-07 · Berth 3.0.1
 
 - **`vendor/`:** the Berth kit is now 3.0.1, which fixes a one-time "catalog unreadable" that could appear on a brand-new install, while everything was starting at once.

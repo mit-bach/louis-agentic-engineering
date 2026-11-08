@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.3.3, a preview (2026-11-07).**
+**From Dominik, for Louis. Version 0.3.4, a preview (2026-11-07).**
 
 This is a project, and a setup for learning. You'll build a small online store:
 - **Its backend you write yourself, by hand.**
@@ -30,6 +30,13 @@ I'm Louis. Dominik gave me this repository to learn agentic engineering, and you
 ```
 
 Berth comes inside this repository, in an edition made for you, so this repository is the only one you need access to.
+
+## Repositories this uses
+
+- **This one,** [`mit-bach/louis-agentic-engineering`](https://github.com/mit-bach/louis-agentic-engineering): the roadmap, your setup, your tutor harness's method, and the copy of the Berth kit you install.
+- **[`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit):** where Berth, cmux-mcp and their skills come from. You install from your copy in `vendor/`, an edition made for you, not from there. Its README, docs and changelog are worth reading, and new versions start there.
+- **Not ours:** cmux, the terminal app, from https://cmux.com.
+- **Coming:** the store kit's repository, listed here once it exists.
 
 ## What's in this version
 
