@@ -101,7 +101,7 @@ These estimates are for full days of work.
 
 ### Setup · Your agentic development environment (half a day)
 - **What works:** one prompt from `README.md` downloads every repository and installs Berth and its MCP servers inside cmux. From then on, every session you start is a row in Berth.
-- **Done:** your agent's checks in `SETUP.md` all pass, and the chat you're in shows up in Berth.
+- **Done:** your agent's checks in `SETUP.md` all pass, the chat you're in shows up in Berth, and two agents it started for you ("Scout" and "Critic") have handed work to each other and back to you.
 
 ### Course 00 · Meet your harness (half a day)
 - **Lesson 1:** you read the harness's map, predict which file controls three behaviours, and check.

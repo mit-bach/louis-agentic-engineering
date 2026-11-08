@@ -72,13 +72,36 @@ You run the Berth kit's own onboarding yourself, here.
 
 From here on, Louis works inside cmux, and every session he starts is a row in Berth.
 
-## Stage 3 · His tutor harness
+## Stage 3 · Show me what it can do
+
+Now run agents for him from this one chat, using the two MCP servers you just installed: `berth` to start, file and track sessions, and `cmux-mcp` to watch them work. Read the `berth` and `cmux-claude` skills first (`~/.claude/skills/`); they say exactly how to start a session, place its job and watch for it to finish. This is the first taste of how Dominik's orchestrators run whole teams of agents, and it's where that grows later.
+
+**Before you start:**
+- Tell him what's about to happen. Each new session uses his Claude plan, and he says yes before you start any.
+- Any permission prompt in a session you start is his to answer in that session's pane. The only dialog you clear yourself is the folder-trust question, after saying so.
+
+**The run:**
+1. **Make the places:** a Berth folder `Playground` (through the `berth` MCP), and a work folder `~/louis-playground/`.
+2. **Start two Claude sessions at once** in `~/louis-playground/`, filed in `Playground`, each with its job placed from a file:
+   - **"Scout":** "Write `transactions.md`: a one-page explanation, for a beginner, of what a database transaction is and why two people buying the last item at once needs one. Use one small example. When you're done, write the single word `done` in `scout.stop`."
+   - **"Critic":** "Wait until `scout.stop` says `done`. Then read `transactions.md` and write `review.md`: the three places a beginner would get lost, and a one-line fix for each. When you're done, write `done` in `critic.stop`."
+3. **Watch them work.** Look at each one's screen with `cmux-mcp` every so often, and tell him in a line what each is doing. Have him press ⌘⇧B to see both sessions in Berth's `Playground` folder.
+4. **When both stop files say `done`,** read `transactions.md` and `review.md`, and show him the two together. Then explain what just happened:
+   - two agents worked in parallel and handed off through files;
+   - this chat started them, watched them and collected their results, without typing into them;
+   - a prompt placed in a session's pane is read as his voice, while a message runs alongside the work.
+5. **Show him one Berth move on them,** with his yes: fork "Scout", or put both to sleep and wake one. Let him do it from the Berth screen if he'd like to.
+6. **Leave the sessions to him.** Tell him how to sleep them or move them to Berth's trash, and never close them yourself.
+
+Note in `PROGRESS.md` when this stage is done.
+
+## Stage 4 · His tutor harness
 
 It installs into `~/tutor/`, in a later version of this repository.
 - **If this repository has `harness/INSTALL.md`,** follow it.
 - **If not,** tell him it isn't ready yet, and go to "When you're done".
 
-## Stage 4 · The store
+## Stage 5 · The store
 
 It comes with the store kit, in its own repository, cloned into `~/code/store/`.
 - **If this repository's README lists the store kit's repository,** follow the instructions there.
@@ -86,7 +109,7 @@ It comes with the store kit, in its own repository, cloned into `~/code/store/`.
 
 ## When you're done
 
-1. **Tell him what's set up,** in a short list, and what isn't ready yet.
+1. **Tell him what's set up,** in a short list, what the agents made in `~/louis-playground/`, and what isn't ready yet.
 2. **Tell him what to read next:** `~/louis-agentic-engineering/ROADMAP.md`, then `harness/HARNESS.md`.
 3. **Tell him how updates arrive:**
    - this repository gets them with `git -C ~/louis-agentic-engineering pull`;

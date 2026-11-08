@@ -1,5 +1,16 @@
 # Changes
 
+## 0.5.0 · 2026-11-08 · The prompt comes first, and it shows you what it can do
+
+- **`README.md`:** the prompt is now the first thing on the page. It sets everything up in one chat, then runs agents for you.
+- **`SETUP.md`:** a new stage 3, "Show me what it can do". From this one chat, your agent:
+  - starts two Claude sessions through Berth, "Scout" and "Critic", which hand work to each other through files;
+  - watches them with cmux-mcp;
+  - brings their results back to you, and shows you a Berth move on them.
+
+  The tutor harness and the store are now stages 4 and 5.
+- **Coming:** running whole teams of agents, the way Dominik's orchestrators do.
+
 ## 0.4.2 · 2026-11-08 · Setup fixes from Berth's maintainer
 
 - **`SETUP.md`:**
