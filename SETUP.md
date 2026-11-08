@@ -36,7 +36,7 @@ These come from the Berth kit, an edition made for him, which ships inside this 
 
 1. **He installs cmux himself.** He downloads it from https://cmux.com, drags it into Applications, and opens it once. Wait until he says it's open.
 2. **Unpack the Berth kit where it will live for good,** because everything it installs runs from that folder:
-   - check the zip against its checksum file. Run `shasum -a 256 -c berth-kit-3.0.0.zip.sha256` from inside `vendor/`, and stop if it doesn't print `OK`;
+   - check the zip against its checksum file. Run `shasum -a 256 -c berth-kit-*.zip.sha256` from inside `vendor/`, and stop if it doesn't print `OK`;
    - unzip it into his home folder, so its top folder becomes `~/berth-kit`. If `~/berth-kit` already exists, stop and ask him;
    - tell him the version, from `~/berth-kit/VERSION`. The kit's own onboarding then checks every file against its `MANIFEST.txt`.
 3. **Hand him to the kit's own onboarding.** Read the "cmux" section of `~/berth-kit/README.md`, and give him its steps 3 and 4 exactly:

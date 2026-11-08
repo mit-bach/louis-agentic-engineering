@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.3.2, a preview (2026-11-07).**
+**From Dominik, for Louis. Version 0.3.3, a preview (2026-11-07).**
 
 This is a project, and a setup for learning. You'll build a small online store:
 - **Its backend you write yourself, by hand.**
@@ -34,7 +34,7 @@ Berth comes inside this repository, in an edition made for you, so this reposito
 ## What's in this version
 
 - **[`SETUP.md`](SETUP.md):** your agent's setup steps. Stage 1 (cmux, Berth and the MCP servers) works now. The tutor harness and the store follow in the next versions.
-- **[`vendor/`](vendor/):** the Berth kit, version 3.0.0, in an edition made for you, with its checksum.
+- **[`vendor/`](vendor/):** the Berth kit, version 3.0.1, in an edition made for you, with its checksum.
 - **[`ROADMAP.md`](ROADMAP.md):** the whole plan. It covers what you build and in what order, what you write versus what your agents do, and how you check each step yourself.
 - **[`OPTIONAL-SPECS.md`](OPTIONAL-SPECS.md):** extra tasks you can pick from once the main path is done, or alongside it.
 - **[`harness/`](harness/):** the rulebook and the two lesson formats of your tutor harness. Read them now; don't install them yet. Start with [`harness/HARNESS.md`](harness/HARNESS.md), then [`harness/CLAUDE.md`](harness/CLAUDE.md).

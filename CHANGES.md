@@ -1,5 +1,10 @@
 # Changes
 
+## 0.3.3 · 2026-11-07 · Berth 3.0.1
+
+- **`vendor/`:** the Berth kit is now 3.0.1, which fixes a one-time "catalog unreadable" that could appear on a brand-new install, while everything was starting at once.
+- **`SETUP.md`:** the checksum step works for whichever kit version is in `vendor/`.
+
 ## 0.3.2 · 2026-11-07 · The repository is the way in
 
 - **`README.md`:** you start from a clone of this repository, with the exact command. Updates reach you with `git pull`.
