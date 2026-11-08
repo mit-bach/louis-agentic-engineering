@@ -1,5 +1,9 @@
 # Changes
 
+## 0.7.3 · 2026-11-08 · Store milestone M3
+
+- **The store kit** now has M3: visitor sessions, the cart, shopping agents, and your reviewer as a skill in your tutor harness. You get it with `make update` in `~/code/store`.
+
 ## 0.7.2 · 2026-11-08 · Store milestone M2
 
 - **The store kit** now has M2: archiving, editing, adjusting stock, your first race, and the wall on both sides. You get it with `make update` in `~/code/store`.
