@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.5.0, a preview (2026-11-08).**
+**From Dominik, for Louis. Version 0.5.1, a preview (2026-11-08).**
 
 ## Paste this into Claude Code
 
@@ -42,14 +42,13 @@ You'll work the way Dominik does every day:
 ## Repositories this uses
 
 - **This one,** [`mit-bach/louis-agentic-engineering`](https://github.com/mit-bach/louis-agentic-engineering): the roadmap, your setup, and your tutor harness's method. Your agent clones it into `~/louis-agentic-engineering`.
-- **[`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit):** Berth, cmux-mcp and their skills. Your agent clones it into `~/berth-kit` and installs Berth from there. If that clone ever fails, it uses the copy in `vendor/` instead. Its README, docs and changelog are worth reading.
+- **[`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit):** Berth, cmux-mcp and their skills. Your agent clones it into `~/berth-kit` and installs Berth from there, and you update it with its README's "Update" prompt. Its README, docs and changelog are worth reading.
 - **Not ours:** cmux, the terminal app, from https://cmux.com.
 - **Coming:** the store kit's repository, listed here once it exists.
 
 ## What's in this version
 
 - **[`SETUP.md`](SETUP.md):** your agent's setup steps. Downloading the repositories, installing Berth and its MCP servers, and the "Show me what it can do" run work now. The tutor harness and the store follow in the next versions.
-- **[`vendor/`](vendor/):** a fallback copy of the Berth kit, version 3.0.1, with its checksum.
 - **[`ROADMAP.md`](ROADMAP.md):** the whole plan. It covers what you build and in what order, what you write versus what your agents do, and how you check each step yourself.
 - **[`OPTIONAL-SPECS.md`](OPTIONAL-SPECS.md):** extra tasks you can pick from once the main path is done, or alongside it.
 - **[`harness/`](harness/):** the rulebook and the two lesson formats of your tutor harness. Read them now; don't install them yet. Start with [`harness/HARNESS.md`](harness/HARNESS.md), then [`harness/CLAUDE.md`](harness/CLAUDE.md).

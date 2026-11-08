@@ -1,5 +1,10 @@
 # Changes
 
+## 0.5.1 · 2026-11-08 · One source for Berth
+
+- **Removed:** `vendor/`. Berth comes only from [`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit), which is public and reviewed. If cloning it fails, setup stops and tells you, instead of installing an older copy.
+- **`SETUP.md`:** it always checks that `v3.1.0` is the reviewed commit, and skips Berth's "Keep a baseline" step, since your copy is a git clone.
+
 ## 0.5.0 · 2026-11-08 · The prompt comes first, and it shows you what it can do
 
 - **`README.md`:** the prompt is now the first thing on the page. It sets everything up in one chat, then runs agents for you.

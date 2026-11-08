@@ -41,12 +41,9 @@ After that come Louis's tutor harness and his store project.
 1. **If `~/berth-kit` already exists,** stop and ask him what it is before you touch it.
 2. **Clone it where it will live for good:** `git clone https://github.com/mit-bach/berth-kit ~/berth-kit`.
    - **Then check it has content.** Cloning an empty repository still succeeds, so judge by what's there: `git -C ~/berth-kit rev-parse --verify -q HEAD` answers, `~/berth-kit/VERSION` exists, and `git -C ~/berth-kit describe --tags` shows `v3.1.0` or newer.
-   - **If the tag is exactly `v3.1.0`,** check it's the tree that was reviewed: `git -C ~/berth-kit rev-parse 'v3.1.0^{commit}'` must print `226f723287df13d023fa4897b999b2ce7ce5256d`. If it prints anything else, treat the clone as failed (step 3).
+   - **Check that `v3.1.0` is the reviewed tree:** `git -C ~/berth-kit rev-parse 'v3.1.0^{commit}'` must print `226f723287df13d023fa4897b999b2ce7ce5256d`. If it prints anything else, treat the clone as failed (step 3).
    - Tell him the version.
-3. **If the clone fails, comes back empty, or fails a check above,** delete `~/berth-kit`, which then holds only git's own folder. Then use the copy that ships in this repository instead:
-   - from inside `~/louis-agentic-engineering/vendor/`, run `shasum -a 256 -c berth-kit-*.zip.sha256`, and stop unless it prints `OK`;
-   - unzip it into his home folder, so its top folder becomes `~/berth-kit`;
-   - read the version from `~/berth-kit/VERSION`.
+3. **If the clone fails, comes back empty, or fails a check above,** stop. Delete `~/berth-kit` only if you just made it and it holds nothing but git's own folder. Tell him exactly what failed, and to send it to Dominik. Don't install Berth from anywhere else.
 
 ## Stage 2 · Install Berth and its MCP servers, in this chat
 
@@ -58,7 +55,7 @@ You run the Berth kit's own onboarding yourself, here.
 2. **Go through its decisions with him, one at a time, in plain words.** Recommend, but let him choose. They're written to `~/.berth-onboarding/DECISIONS.md` and settled there, so no later stage asks them again.
 3. **Install it the way its section 5 says,** one stage at a time, each with `--dry-run` first and his go-ahead.
    - Claude Code is his agent, so install the `agents` stage and skip `grok`.
-   - **"Keep a baseline":** skip it on a clone. If you fell back to the zip, do it, in a subshell, because that copy came without git.
+   - **"Keep a baseline":** skip it. Your copy is a git clone, so `git -C ~/berth-kit status` already shows any change.
 4. **Restart this chat the way its section 6 says,** so you get the new tools. Before you do:
    - write in `PROGRESS.md` that you're at stage 2, step 5;
    - tell him to send "continue" once the chat reopens.
