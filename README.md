@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.3.0, a preview (2026-11-07).**
+**From Dominik, for Louis. Version 0.3.1, a preview (2026-11-07).**
 
 This is a project, and a setup for learning. You'll build a small online store:
 - **Its backend you write yourself, by hand.**
@@ -21,12 +21,12 @@ You'll work the way Dominik does every day:
 
 Your agent installs them for you, one step at a time, and explains each step as it goes.
 
-1. **Clone this repository somewhere it can stay for good,** such as `~/louis-agentic-engineering`. Don't put it in Downloads, Desktop, Documents or iCloud.
+1. **Put this repository somewhere it can stay for good,** such as `~/louis-agentic-engineering`. Either clone it, or unzip the copy Dominik emailed you. Don't put it in Downloads, Desktop, Documents or iCloud.
 2. **Open that folder in your terminal,** and start Claude Code with `claude`.
 3. **Send it this:**
 
 ```text
-I'm Louis. Dominik gave me this repository to learn agentic engineering, and you're running inside my clone of it. Set up my development environment: read SETUP.md all the way through and do what it says, one stage at a time. I'm new to this, so explain each step in plain words before you do it, show me dry runs first, and ask me before you change anything on my Mac.
+I'm Louis. Dominik gave me this repository to learn agentic engineering, and you're running inside my copy of it. Set up my development environment: read SETUP.md all the way through and do what it says, one stage at a time. I'm new to this, so explain each step in plain words before you do it, show me dry runs first, and ask me before you change anything on my Mac.
 ```
 
 Berth comes inside this repository, in an edition made for you, so this repository is the only one you need access to.

@@ -1,5 +1,9 @@
 # Changes
 
+## 0.3.1 · 2026-11-07 · Works from the emailed zip too
+
+- **`README.md`:** you can start from the zip Dominik emailed, unzipped somewhere permanent, as well as from a clone. The kickoff prompt says "copy" instead of "clone".
+
 ## 0.3.0 · 2026-11-07 · Berth comes with it
 
 - **New:** `vendor/berth-kit-3.0.0.zip` and its `.sha256`. It's the Berth kit, version 3.0.0, in an edition made for you, with the same Berth and cmux-mcp. Stage 1 of `SETUP.md` now works from start to finish.
