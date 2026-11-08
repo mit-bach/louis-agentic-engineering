@@ -116,7 +116,7 @@ These estimates are for full days of work.
 - **Harness:** you write your coding agent's rules file, `AGENTS.md`, in your own words.
   - **Control:** ask your agent to write a backend file, once with the rules file and once without it. Predict first.
 
-### M1 · Products, and the store's first tools (1.5 days)
+### M1 · Products, and the store's first tools (2 days)
 - **You write:**
   - the products table;
   - a seed of at least 8 products, in a catalogue you choose;
@@ -237,7 +237,7 @@ These estimates are for full days of work.
   - the two-window test;
   - three questions answered without notes.
 
-**About 10 working days in all.**
+**About 10 to 11 working days in all.**
 
 ---
 

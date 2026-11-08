@@ -1,5 +1,11 @@
 # Changes
 
+## 0.7.0 · 2026-11-08 · Your first course: the store kit
+
+- **New repository:** [`mit-bach/louis-store`](https://github.com/mit-bach/louis-store), the store kit, with milestones M0 and M1. Every operation is reachable over HTTP, from the command line, and as an agent tool.
+- **`SETUP.md` stage 5** clones it into `~/code/store` and sends you to Tutor Orch to start course 01.
+- **`ROADMAP.md`:** M1 now includes the command line, and takes about 2 days.
+
 ## 0.6.0 · 2026-11-08 · Your tutor harness, installed for real
 
 - **New repository:** [`mit-bach/louis-tutor`](https://github.com/mit-bach/louis-tutor), your tutor harness. It's ported from the tutor system Dominik uses every day: the rulebook, five lesson formats, the startup hook, `new-course`, the lesson linter, a self-check, the course template, Tutor Orch's role and records, and a `new-course` skill.

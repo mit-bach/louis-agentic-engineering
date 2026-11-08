@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.6.0, a preview (2026-11-08).**
+**From Dominik, for Louis. Version 0.7.0, a preview (2026-11-08).**
 
 ## Paste this into Claude Code
 
@@ -43,13 +43,13 @@ You'll work the way Dominik does every day:
 
 - **This one,** [`mit-bach/louis-agentic-engineering`](https://github.com/mit-bach/louis-agentic-engineering): the roadmap and your setup. Your agent clones it into `~/louis-agentic-engineering`.
 - **[`mit-bach/louis-tutor`](https://github.com/mit-bach/louis-tutor):** your tutor harness, ported from the tutor system Dominik uses: the rulebook, lesson formats, startup hook, course tools, and the Tutor Orch and Tutor Prime sessions. Your agent clones it into `~/tutor` and installs it.
+- **[`mit-bach/louis-store`](https://github.com/mit-bach/louis-store):** your first course, the store kit: the brief, the contract, the step-by-step guides and the checks, with no backend code in it, since that's yours to write. Your agent clones it into `~/code/store`. Milestones M0 and M1 are ready, and the rest arrive with `make update`.
 - **[`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit):** Berth, cmux-mcp and their skills. Your agent clones it into `~/berth-kit` and installs Berth from there, and you update it with its README's "Update" prompt. Its README, docs and changelog are worth reading.
 - **Not ours:** cmux, the terminal app, from https://cmux.com.
-- **Coming:** the store kit's repository, listed here once it exists.
 
 ## What's in this version
 
-- **[`SETUP.md`](SETUP.md):** your agent's setup steps. Downloading the repositories, installing Berth and its MCP servers, the "Show me what it can do" run, and installing your tutor harness work now. The store follows.
+- **[`SETUP.md`](SETUP.md):** your agent's setup steps. Downloading the repositories, installing Berth and its MCP servers, the "Show me what it can do" run, installing your tutor harness, and setting up the store all work now.
 - **[`ROADMAP.md`](ROADMAP.md):** the whole plan. It covers what you build and in what order, what you write versus what your agents do, and how you check each step yourself.
 - **[`OPTIONAL-SPECS.md`](OPTIONAL-SPECS.md):** extra tasks you can pick from once the main path is done, or alongside it.
 - **[`CHANGES.md`](CHANGES.md):** what each version adds.
@@ -58,11 +58,7 @@ You'll work the way Dominik does every day:
 
 These parts aren't in this version yet. Each one gets tested before you get it.
 - **Running many agents at once:** the way Dominik's orchestrators run whole teams of agents. It builds on what the "Show me" stage starts.
-- **The store kit:**
-  - the starter repo;
-  - the exact API contract;
-  - the step-by-step guides;
-  - the check suite you'll run after every step.
+- **The store kit's later milestones,** M2 to M6: the admin side and the first race, carts, checkout with two buyers at once, agent-first for real, and the frontend.
 - **The first course, "Meet your harness",** inside your tutor harness.
 
 **So for now: run the prompt at the top, then read.**

@@ -13,7 +13,7 @@ After that come Louis's tutor harness and his store project.
 - `~/louis-agentic-engineering`: this repository;
 - `~/berth-kit`: the Berth kit;
 - `~/tutor/`: his tutor harness;
-- `~/code/store/`: his store, later.
+- `~/code/store/`: his store, the kit he builds in.
 
 **How to work with him:**
 - He's new to this. Explain each step in plain words before you do it.
@@ -102,9 +102,10 @@ His tutor system, ported from the one Dominik uses every day: a rulebook, lesson
 
 ## Stage 5 · The store
 
-It comes with the store kit, in its own repository, cloned into `~/code/store/`.
-- **If this repository's README lists the store kit's repository,** follow the instructions there.
-- **If not,** tell him it isn't ready yet.
+His first course: the backend of a small online store, written by hand and built agent-first, with every operation reachable over HTTP, from the command line, and as an agent tool. The kit is its own repository, [`mit-bach/louis-store`](https://github.com/mit-bach/louis-store), cloned into `~/code/store/`.
+
+1. **Read the kit's README** (https://github.com/mit-bach/louis-store), its section "For the agent setting it up", and do exactly what it says. It clones the kit to `~/code/store` and changes nothing else. The store's first step sets up his tools with him, one at a time.
+2. **Then send him to Tutor Orch:** he opens "Tutor Orch" in Berth and asks it to start course 01 from `~/code/store/course/COURSE.md`. His Store Tutor serves the kit's guides from there, one step at a time.
 
 ## When you're done
 
@@ -113,6 +114,7 @@ It comes with the store kit, in its own repository, cloned into `~/code/store/`.
 3. **Tell him how updates arrive:**
    - this repository gets them with `git -C ~/louis-agentic-engineering pull`;
    - his tutor harness gets them with `git -C ~/tutor pull`, merged one change at a time with Tutor Orch, because his own edits live there too;
+   - the store kit gets them with `make update` in `~/code/store`, which merges the kit's new milestones into his own work;
    - Berth gets them through the "Update" prompt in `~/berth-kit/README.md`.
 
    Whenever there's a new version, he pastes the README's prompt again. Each stage checks what's already done and skips it.
