@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.5.1, a preview (2026-11-08).**
+**From Dominik, for Louis. Version 0.6.0, a preview (2026-11-08).**
 
 ## Paste this into Claude Code
 
@@ -41,17 +41,17 @@ You'll work the way Dominik does every day:
 
 ## Repositories this uses
 
-- **This one,** [`mit-bach/louis-agentic-engineering`](https://github.com/mit-bach/louis-agentic-engineering): the roadmap, your setup, and your tutor harness's method. Your agent clones it into `~/louis-agentic-engineering`.
+- **This one,** [`mit-bach/louis-agentic-engineering`](https://github.com/mit-bach/louis-agentic-engineering): the roadmap and your setup. Your agent clones it into `~/louis-agentic-engineering`.
+- **[`mit-bach/louis-tutor`](https://github.com/mit-bach/louis-tutor):** your tutor harness, ported from the tutor system Dominik uses: the rulebook, lesson formats, startup hook, course tools, and the Tutor Orch and Tutor Prime sessions. Your agent clones it into `~/tutor` and installs it.
 - **[`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit):** Berth, cmux-mcp and their skills. Your agent clones it into `~/berth-kit` and installs Berth from there, and you update it with its README's "Update" prompt. Its README, docs and changelog are worth reading.
 - **Not ours:** cmux, the terminal app, from https://cmux.com.
 - **Coming:** the store kit's repository, listed here once it exists.
 
 ## What's in this version
 
-- **[`SETUP.md`](SETUP.md):** your agent's setup steps. Downloading the repositories, installing Berth and its MCP servers, and the "Show me what it can do" run work now. The tutor harness and the store follow in the next versions.
+- **[`SETUP.md`](SETUP.md):** your agent's setup steps. Downloading the repositories, installing Berth and its MCP servers, the "Show me what it can do" run, and installing your tutor harness work now. The store follows.
 - **[`ROADMAP.md`](ROADMAP.md):** the whole plan. It covers what you build and in what order, what you write versus what your agents do, and how you check each step yourself.
 - **[`OPTIONAL-SPECS.md`](OPTIONAL-SPECS.md):** extra tasks you can pick from once the main path is done, or alongside it.
-- **[`harness/`](harness/):** the rulebook and the two lesson formats of your tutor harness. Read them now; don't install them yet. Start with [`harness/HARNESS.md`](harness/HARNESS.md), then [`harness/CLAUDE.md`](harness/CLAUDE.md).
 - **[`CHANGES.md`](CHANGES.md):** what each version adds.
 
 ## What's coming next
@@ -63,12 +63,7 @@ These parts aren't in this version yet. Each one gets tested before you get it.
   - the exact API contract;
   - the step-by-step guides;
   - the check suite you'll run after every step.
-- **The harness's moving parts:**
-  - the startup hook;
-  - the `new-course` skill;
-  - the lesson checker;
-  - the transcript reader;
-  - the first course, "Meet your harness".
+- **The first course, "Meet your harness",** inside your tutor harness.
 
 **So for now: run the prompt at the top, then read.**
 
@@ -76,6 +71,6 @@ These parts aren't in this version yet. Each one gets tested before you get it.
 
 1. **Run the prompt at the top,** and let it finish.
 2. **Read `ROADMAP.md`,** start to finish.
-3. **Before you open `harness/CLAUDE.md`, make one prediction.** Write down which file you think decides what a tutor does when you say a lesson was bad. Then read `harness/HARNESS.md` and `harness/CLAUDE.md`, and check your guess. Predicting first, then checking, is the habit this whole project trains.
+3. **Before you open `~/tutor/CLAUDE.md`, make one prediction.** Write down which file you think decides what a tutor does when you say a lesson was bad. Then read `~/tutor/README.md` and `~/tutor/CLAUDE.md`, and check your guess. Predicting first, then checking, is the habit this whole project trains.
 4. **Write down every question,** and everything that's unclear. Send them to Dominik.
 5. **For the store, later, you'll also need Docker Desktop.** Its first milestone gives the exact install steps.

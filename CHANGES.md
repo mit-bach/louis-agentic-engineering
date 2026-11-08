@@ -1,5 +1,11 @@
 # Changes
 
+## 0.6.0 · 2026-11-08 · Your tutor harness, installed for real
+
+- **New repository:** [`mit-bach/louis-tutor`](https://github.com/mit-bach/louis-tutor), your tutor harness. It's ported from the tutor system Dominik uses every day: the rulebook, five lesson formats, the startup hook, `new-course`, the lesson linter, a self-check, the course template, Tutor Orch's role and records, and a `new-course` skill.
+- **`SETUP.md` stage 4** clones it into `~/tutor`, runs its self-check, and starts Tutor Orch and Tutor Prime in Berth.
+- **Removed:** `harness/`, the earlier read-only drafts. The real harness replaces them.
+
 ## 0.5.1 · 2026-11-08 · One source for Berth
 
 - **Removed:** `vendor/`. Berth comes only from [`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit), which is public and reviewed. If cloning it fails, setup stops and tells you, instead of installing an older copy.

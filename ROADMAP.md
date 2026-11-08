@@ -37,7 +37,7 @@ Every milestone has all three.
 - **You measure an agent with tests of its behaviour (evals),** not by reading a few transcripts.
 
 **3. Harness.** You have two harnesses:
-- your **tutor harness**, the setup in `harness/` that teaches you;
+- your **tutor harness**, the system in `~/tutor` that teaches you ([`mit-bach/louis-tutor`](https://github.com/mit-bach/louis-tutor));
 - your **coding agent's setup**, inside the store's repo.
 
 Each milestone makes one change to one of them, small enough that you can see its effect.
@@ -253,4 +253,4 @@ When a tutor does something you don't like, you're the one who fixes it:
 3. You change it in the narrowest place it fits.
 4. You log it, and see whether you were right.
 
-That loop is how you'll come to build and change harnesses with confidence. Start with [`harness/HARNESS.md`](harness/HARNESS.md).
+That loop is how you'll come to build and change harnesses with confidence. Start with `~/tutor/README.md`, then `~/tutor/orchestrator/ORCHESTRATOR.md`.

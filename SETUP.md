@@ -12,7 +12,7 @@ After that come Louis's tutor harness and his store project.
 **What lives where.** Each of these stays put for good, because what's installed runs from it:
 - `~/louis-agentic-engineering`: this repository;
 - `~/berth-kit`: the Berth kit;
-- `~/tutor/`: his tutor harness, later;
+- `~/tutor/`: his tutor harness;
 - `~/code/store/`: his store, later.
 
 **How to work with him:**
@@ -94,9 +94,11 @@ Note in `PROGRESS.md` when this stage is done.
 
 ## Stage 4 · His tutor harness
 
-It installs into `~/tutor/`, in a later version of this repository.
-- **If this repository has `harness/INSTALL.md`,** follow it.
-- **If not,** tell him it isn't ready yet, and go to "When you're done".
+His tutor system, ported from the one Dominik uses every day: a rulebook, lesson formats, a startup hook, course tools, and two standing sessions in Berth, Tutor Orch and Tutor Prime. It lives in its own repository, [`mit-bach/louis-tutor`](https://github.com/mit-bach/louis-tutor), cloned into `~/tutor/`.
+
+1. **Clone it:** `git clone https://github.com/mit-bach/louis-tutor ~/tutor`. If `~/tutor` already exists and is this harness, `git -C ~/tutor pull` instead.
+2. **Follow `~/tutor/INSTALL.md`** all the way through. It runs the harness's self-check, makes the Berth folder `Tutor`, starts and primes Tutor Orch and Tutor Prime, and has him fill in his profile.
+3. **Then tell him:** from now on, he starts a course by opening "Tutor Orch" in Berth and saying what he wants to learn.
 
 ## Stage 5 · The store
 
@@ -107,9 +109,10 @@ It comes with the store kit, in its own repository, cloned into `~/code/store/`.
 ## When you're done
 
 1. **Tell him what's set up,** in a short list, what the agents made in `~/louis-playground/`, and what isn't ready yet.
-2. **Tell him what to read next:** `~/louis-agentic-engineering/ROADMAP.md`, then `harness/HARNESS.md`.
+2. **Tell him what to read next:** `~/louis-agentic-engineering/ROADMAP.md`, then `~/tutor/README.md`.
 3. **Tell him how updates arrive:**
    - this repository gets them with `git -C ~/louis-agentic-engineering pull`;
+   - his tutor harness gets them with `git -C ~/tutor pull`, merged one change at a time with Tutor Orch, because his own edits live there too;
    - Berth gets them through the "Update" prompt in `~/berth-kit/README.md`.
 
    Whenever there's a new version, he pastes the README's prompt again. Each stage checks what's already done and skips it.
