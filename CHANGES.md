@@ -1,5 +1,9 @@
 # Changes
 
+## 0.3.2 · 2026-11-07 · The repository is the way in
+
+- **`README.md`:** you start from a clone of this repository, with the exact command. Updates reach you with `git pull`.
+
 ## 0.3.1 · 2026-11-07 · Works from the emailed zip too
 
 - **`README.md`:** you can start from the zip Dominik emailed, unzipped somewhere permanent, as well as from a clone. The kickoff prompt says "copy" instead of "clone".
