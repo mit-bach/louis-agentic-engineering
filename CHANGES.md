@@ -1,5 +1,13 @@
 # Changes
 
+## 0.4.2 · 2026-11-08 · Setup fixes from Berth's maintainer
+
+- **`SETUP.md`:**
+  - an empty clone is caught by what's in it, not by whether `git clone` succeeded;
+  - the empty folder is deleted before the fallback copy is unzipped;
+  - the agent never `cd`s into the kit, so Berth's restart reopens the chat where it started;
+  - the fallback copy keeps Berth's "Keep a baseline" step.
+
 ## 0.4.1 · 2026-11-08 · A check on the Berth kit you clone
 
 - **`SETUP.md`:** a clone tagged `v3.1.0` is accepted only if that tag is the reviewed commit `226f7232…`. Otherwise setup uses the copy in `vendor/`.

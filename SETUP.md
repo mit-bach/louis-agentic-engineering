@@ -40,23 +40,25 @@ After that come Louis's tutor harness and his store project.
 
 1. **If `~/berth-kit` already exists,** stop and ask him what it is before you touch it.
 2. **Clone it where it will live for good:** `git clone https://github.com/mit-bach/berth-kit ~/berth-kit`.
-   - Then check it isn't empty: `~/berth-kit/VERSION` exists, and `git -C ~/berth-kit describe --tags` shows `v3.1.0` or newer.
+   - **Then check it has content.** Cloning an empty repository still succeeds, so judge by what's there: `git -C ~/berth-kit rev-parse --verify -q HEAD` answers, `~/berth-kit/VERSION` exists, and `git -C ~/berth-kit describe --tags` shows `v3.1.0` or newer.
    - **If the tag is exactly `v3.1.0`,** check it's the tree that was reviewed: `git -C ~/berth-kit rev-parse 'v3.1.0^{commit}'` must print `226f723287df13d023fa4897b999b2ce7ce5256d`. If it prints anything else, treat the clone as failed (step 3).
    - Tell him the version.
-3. **If the clone fails or comes back empty,** remove the empty folder, and use the copy that ships in this repository instead:
+3. **If the clone fails, comes back empty, or fails a check above,** delete `~/berth-kit`, which then holds only git's own folder. Then use the copy that ships in this repository instead:
    - from inside `~/louis-agentic-engineering/vendor/`, run `shasum -a 256 -c berth-kit-*.zip.sha256`, and stop unless it prints `OK`;
    - unzip it into his home folder, so its top folder becomes `~/berth-kit`;
    - read the version from `~/berth-kit/VERSION`.
 
 ## Stage 2 · Install Berth and its MCP servers, in this chat
 
-You run the Berth kit's own onboarding yourself, here, with its commands run from inside `~/berth-kit`.
+You run the Berth kit's own onboarding yourself, here.
+
+**Never `cd` into the kit.** If you do, Claude Code can record `~/berth-kit` as this chat's folder, and Berth's restart then reopens the chat there instead of where he started it. So run every kit command by its full path (`~/berth-kit/tools/install.sh cmux --dry-run`, `python3 ~/berth-kit/tools/doctor.py`), or in a subshell (`(cd ~/berth-kit && tools/install.sh cmux --dry-run)`). START-HERE's paths are relative to the kit, so read every `tools/…` and `docs/…` in it as `~/berth-kit/tools/…` and `~/berth-kit/docs/…`.
 
 1. **Read `~/berth-kit/onboarding/cmux/START-HERE.md` all the way through,** then `~/berth-kit/docs/WHY.md`, before you change anything on his Mac. Follow its ground rules as well as these.
 2. **Go through its decisions with him, one at a time, in plain words.** Recommend, but let him choose. They're written to `~/.berth-onboarding/DECISIONS.md` and settled there, so no later stage asks them again.
 3. **Install it the way its section 5 says,** one stage at a time, each with `--dry-run` first and his go-ahead.
    - Claude Code is his agent, so install the `agents` stage and skip `grok`.
-   - On a clone of the kit, skip "Keep a baseline", which is for a copy that came without git.
+   - **"Keep a baseline":** skip it on a clone. If you fell back to the zip, do it, in a subshell, because that copy came without git.
 4. **Restart this chat the way its section 6 says,** so you get the new tools. Before you do:
    - write in `PROGRESS.md` that you're at stage 2, step 5;
    - tell him to send "continue" once the chat reopens.
