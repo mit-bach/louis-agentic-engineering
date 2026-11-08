@@ -29,7 +29,7 @@ This is your tutor harness. It's yours to read and change. This page says which 
   - `session_state.py` is the startup hook;
   - `lint-lesson.py` checks a lesson;
   - `tx.py` condenses a session's transcript.
-- **`.claude/`:** this folder's settings, and the `new-course` skill.
+- **`.claude/`:** this folder's settings, and the `new-course` skill. Each course folder gets its own `.claude/settings.json` too, made by `new-course`, because Claude Code reads settings only from the folder a session starts in. Without it, a tutor in its course folder never runs the hook.
 
 ## When things run
 
@@ -40,7 +40,7 @@ This is your tutor harness. It's yours to read and change. This page says which 
 | You run `new-course` | The skill |
 | Before a lesson ships | The linter |
 
-**The hook** runs whenever a tutor session starts, resumes, or comes back from a compaction. It tells the tutor where its course stands: the "Where we are" note, the newest lesson, and your newest reply. Rules never come from the hook. They're always in the `CLAUDE.md` files.
+**The hook** runs whenever a tutor session starts, resumes, or comes back from a compaction, from the course folder's own settings. It tells the tutor where its course stands: the "Where we are" note, the newest lesson, and your newest reply. Rules never come from the hook. They're always in the `CLAUDE.md` files.
 
 ## Words you'll meet
 

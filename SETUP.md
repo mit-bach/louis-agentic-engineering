@@ -25,31 +25,33 @@ After that come Louis's tutor harness and his store project.
    - this Mac runs macOS;
    - Claude Code runs (`claude --version`);
    - git is there (`git --version`);
-   - Python is 3.12 or newer (`python3 --version`).
+   - uv is installed (`uv --version`), or Python 3.12 itself (`python3.12 --version`). The Berth installer needs one of the two, and Python 3.13 alone isn't enough. If neither is there, leave it: the Berth kit's onboarding installs uv once he says yes, and uv fetches Python 3.12 itself.
 2. **Check where this repository lives.** It has to stay in one place for good, such as `~/louis-agentic-engineering`. If it's in Downloads, Desktop, Documents or iCloud, ask him to move it first.
-3. **Check his access to the Berth kit,** which is private: `git ls-remote https://github.com/mit-bach/berth-kit`.
-   - If that's refused, stop. He sends Dominik his GitHub username, and you pick up again once Dominik has added him.
+3. **Check that the Berth kit came with this repository:** `ls vendor/berth-kit-*.zip`. If it's missing, stop and tell him this version doesn't include it yet.
 4. **Don't install anything in this stage.**
 
 ## Stage 1 · cmux, Berth and their MCP servers
 
-These come from the Berth kit, version 3.0.0 or newer. The kit has its own onboarding, which runs in its own chat, inside cmux. Your job here is to get him there, and to check the result afterwards.
+These come from the Berth kit, an edition made for him, which ships inside this repository in `vendor/`. The kit has its own onboarding, which runs in its own chat, inside cmux. Your job here is to get him there, and to check the result afterwards.
 
 1. **He installs cmux himself.** He downloads it from https://cmux.com, drags it into Applications, and opens it once. Wait until he says it's open.
-2. **Clone the Berth kit where it will live for good,** because everything it installs runs from that folder:
-   - run `git clone https://github.com/mit-bach/berth-kit ~/berth-kit`;
-   - run `git -C ~/berth-kit describe --tags`, and tell him the version.
+2. **Unpack the Berth kit where it will live for good,** because everything it installs runs from that folder:
+   - check the zip against its `.sha256` file in `vendor/`, and stop if it doesn't match;
+   - unzip it so its top folder becomes `~/berth-kit`;
+   - tell him the version, from the kit's `CHANGELOG.md`.
 3. **Hand him to the kit's own onboarding.** Read the "cmux" section of `~/berth-kit/README.md`, and give him its steps 3 and 4 exactly:
    - in cmux, open a workspace;
    - `cd ~/berth-kit` and start `claude`;
    - send it the kit's cmux prompt, which you copy for him word for word from that README.
 
-   That chat installs Berth and the MCP servers, checks them, and walks him through his first day. Tell him to come back here when it's finished, in a new Claude chat in this repository, opened inside cmux this time, and to say "stage 1 done".
+   That chat installs Berth and the MCP servers, checks them, and walks him through his first day. On the way it asks him the day-one decisions, including Berth's session standard. Those are settled there, so no later stage asks them again.
+
+   Tell him to come back here when it's finished, in a new Claude chat in this repository, opened inside cmux this time, and to say "stage 1 done".
 4. **When he's back, check it worked, and show him each result:**
-   - `berth status` answers;
-   - `python3 ~/berth-kit/tools/doctor.py` passes;
-   - `claude mcp list` shows the Berth and cmux-mcp servers;
-   - this chat is itself a session listed in Berth.
+   - `berth status` answers, with its watcher and cmux up;
+   - `python3 ~/berth-kit/tools/doctor.py` exits 0. A "note", such as a sidebar or shortcut he declined, is fine. A "FIX" isn't;
+   - `claude mcp list` shows `berth` and `cmux-mcp`, both connected;
+   - `berth sessions --json` lists his folder, and one row has `"you": true`. That row is this chat.
 
    If any of these fails, stop and tell him which one. Don't fix the Berth kit yourself.
 
