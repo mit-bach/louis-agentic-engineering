@@ -1,5 +1,14 @@
 # Changes
 
+## 0.4.0 · 2026-11-08 · One prompt downloads and installs everything
+
+- **`README.md`:** one prompt to paste into Claude Code inside cmux, from any folder. It clones this repository into `~/louis-agentic-engineering`, then follows `SETUP.md`.
+- **`SETUP.md`:**
+  - it clones the Berth kit from `mit-bach/berth-kit` into `~/berth-kit`, falling back to `vendor/` if the clone fails or comes back empty;
+  - it runs Berth's own onboarding in the same chat, which restarts once and carries on from `~/.louis-setup/PROGRESS.md`;
+  - stages 3 and 4 pick up the tutor harness and the store when they arrive.
+- **Updates:** paste the same prompt again. It pulls what's new and skips what's done.
+
 ## 0.3.4 · 2026-11-07 · Every repository it uses, linked
 
 - **`README.md`:** a new section, "Repositories this uses". It links this repository and the Berth kit's, says where cmux comes from, and will list the store kit's repository once it exists.

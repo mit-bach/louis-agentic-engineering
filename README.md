@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.3.4, a preview (2026-11-07).**
+**From Dominik, for Louis. Version 0.4.0, a preview (2026-11-08).**
 
 This is a project, and a setup for learning. You'll build a small online store:
 - **Its backend you write yourself, by hand.**
@@ -12,36 +12,44 @@ It's built to grow three things:
 2. your agentic engineering technicals;
 3. a feel for what an **agent-first product** is, and for **managing a harness** the way an experienced agentic engineer does.
 
-## Start here: one prompt sets up your environment
+## Start here: one prompt sets up everything
 
 You'll work the way Dominik does every day:
 - **cmux,** a terminal app built for running many agent sessions;
 - **Berth,** a catalog of all your sessions, with an MCP server so agents can start and run other agents;
 - **cmux-mcp,** which lets one agent see and type into another's pane.
 
-Your agent installs them for you, one step at a time, and explains each step as it goes.
+One prompt downloads every repository this project uses and installs everything. Your agent explains each step as it goes, and asks before it changes anything on your Mac.
 
-1. **Clone this repository somewhere it can stay for good:** `git clone https://github.com/mit-bach/louis-agentic-engineering ~/louis-agentic-engineering`. Don't put it in Downloads, Desktop, Documents or iCloud.
-2. **Open that folder in your terminal,** and start Claude Code with `claude`.
-3. **Send it this:**
+1. **Install cmux:** download it from https://cmux.com, drag it into Applications, and open it once.
+2. **In cmux, open a workspace,** and start Claude Code with `claude`. It doesn't matter which folder you're in.
+3. **Paste this, and answer its questions:**
 
 ```text
-I'm Louis. Dominik gave me this repository to learn agentic engineering, and you're running inside my copy of it. Set up my development environment: read SETUP.md all the way through and do what it says, one stage at a time. I'm new to this, so explain each step in plain words before you do it, show me dry runs first, and ask me before you change anything on my Mac.
+I'm Louis, and I'm learning agentic engineering. My friend Dominik built me a project for it, and I want you to set up everything on this Mac from scratch and get it running.
+
+1. Clone https://github.com/mit-bach/louis-agentic-engineering into ~/louis-agentic-engineering, which is where it stays for good. If it's already there, pull the newest version instead.
+
+2. Read ~/louis-agentic-engineering/SETUP.md all the way through, then do what it says, one stage at a time. It downloads the rest, including Dominik's Berth kit, and installs cmux's tools, Berth and their MCP servers. Keep track the way it says, because this chat restarts once on the way.
+
+3. I'm new to this. Explain each step in plain words before you do it, show me dry runs first, and ask me before you change anything on my Mac.
+
+Ground rules: don't close, restart, or type into any of my other sessions unless I say so. If anything fails, stop and tell me what happened instead of working around it.
 ```
 
-Berth comes inside this repository, in an edition made for you, so this repository is the only one you need access to.
+The chat restarts once, to load Berth's tools. When it reopens, type `continue`. When there's a new version of this project, paste the same prompt again: it picks up what's new and skips what's done.
 
 ## Repositories this uses
 
-- **This one,** [`mit-bach/louis-agentic-engineering`](https://github.com/mit-bach/louis-agentic-engineering): the roadmap, your setup, your tutor harness's method, and the copy of the Berth kit you install.
-- **[`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit):** where Berth, cmux-mcp and their skills come from. You install from your copy in `vendor/`, an edition made for you, not from there. Its README, docs and changelog are worth reading, and new versions start there.
+- **This one,** [`mit-bach/louis-agentic-engineering`](https://github.com/mit-bach/louis-agentic-engineering): the roadmap, your setup, and your tutor harness's method. Your agent clones it into `~/louis-agentic-engineering`.
+- **[`mit-bach/berth-kit`](https://github.com/mit-bach/berth-kit):** Berth, cmux-mcp and their skills. Your agent clones it into `~/berth-kit` and installs Berth from there. If that clone ever fails, it uses the copy in `vendor/` instead. Its README, docs and changelog are worth reading.
 - **Not ours:** cmux, the terminal app, from https://cmux.com.
 - **Coming:** the store kit's repository, listed here once it exists.
 
 ## What's in this version
 
-- **[`SETUP.md`](SETUP.md):** your agent's setup steps. Stage 1 (cmux, Berth and the MCP servers) works now. The tutor harness and the store follow in the next versions.
-- **[`vendor/`](vendor/):** the Berth kit, version 3.0.1, in an edition made for you, with its checksum.
+- **[`SETUP.md`](SETUP.md):** your agent's setup steps. Downloading the repositories and installing Berth and its MCP servers work now. The tutor harness and the store follow in the next versions.
+- **[`vendor/`](vendor/):** a fallback copy of the Berth kit, version 3.0.1, with its checksum.
 - **[`ROADMAP.md`](ROADMAP.md):** the whole plan. It covers what you build and in what order, what you write versus what your agents do, and how you check each step yourself.
 - **[`OPTIONAL-SPECS.md`](OPTIONAL-SPECS.md):** extra tasks you can pick from once the main path is done, or alongside it.
 - **[`harness/`](harness/):** the rulebook and the two lesson formats of your tutor harness. Read them now; don't install them yet. Start with [`harness/HARNESS.md`](harness/HARNESS.md), then [`harness/CLAUDE.md`](harness/CLAUDE.md).
@@ -62,11 +70,11 @@ These parts aren't in this version yet. Each one gets tested before you get it.
   - the transcript reader;
   - the first course, "Meet your harness".
 
-**So for now: set up your environment with the prompt above, then read.**
+**So for now: run the prompt above, then read.**
 
 ## What to do now
 
-1. **Run the setup prompt above,** and finish stage 1.
+1. **Run the setup prompt above,** and let it finish.
 2. **Read `ROADMAP.md`,** start to finish.
 3. **Before you open `harness/CLAUDE.md`, make one prediction.** Write down which file you think decides what a tutor does when you say a lesson was bad. Then read `harness/HARNESS.md` and `harness/CLAUDE.md`, and check your guess. Predicting first, then checking, is the habit this whole project trains.
 4. **Write down every question,** and everything that's unclear. Send them to Dominik.
