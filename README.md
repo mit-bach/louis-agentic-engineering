@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.4.0, a preview (2026-11-08).**
+**From Dominik, for Louis. Version 0.4.1, a preview (2026-11-08).**
 
 This is a project, and a setup for learning. You'll build a small online store:
 - **Its backend you write yourself, by hand.**

@@ -41,6 +41,7 @@ After that come Louis's tutor harness and his store project.
 1. **If `~/berth-kit` already exists,** stop and ask him what it is before you touch it.
 2. **Clone it where it will live for good:** `git clone https://github.com/mit-bach/berth-kit ~/berth-kit`.
    - Then check it isn't empty: `~/berth-kit/VERSION` exists, and `git -C ~/berth-kit describe --tags` shows `v3.1.0` or newer.
+   - **If the tag is exactly `v3.1.0`,** check it's the tree that was reviewed: `git -C ~/berth-kit rev-parse 'v3.1.0^{commit}'` must print `226f723287df13d023fa4897b999b2ce7ce5256d`. If it prints anything else, treat the clone as failed (step 3).
    - Tell him the version.
 3. **If the clone fails or comes back empty,** remove the empty folder, and use the copy that ships in this repository instead:
    - from inside `~/louis-agentic-engineering/vendor/`, run `shasum -a 256 -c berth-kit-*.zip.sha256`, and stop unless it prints `OK`;

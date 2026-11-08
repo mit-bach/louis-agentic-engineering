@@ -1,5 +1,9 @@
 # Changes
 
+## 0.4.1 · 2026-11-08 · A check on the Berth kit you clone
+
+- **`SETUP.md`:** a clone tagged `v3.1.0` is accepted only if that tag is the reviewed commit `226f7232…`. Otherwise setup uses the copy in `vendor/`.
+
 ## 0.4.0 · 2026-11-08 · One prompt downloads and installs everything
 
 - **`README.md`:** one prompt to paste into Claude Code inside cmux, from any folder. It clones this repository into `~/louis-agentic-engineering`, then follows `SETUP.md`.
