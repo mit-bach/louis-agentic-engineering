@@ -99,6 +99,10 @@ The guides are split into steps, and each step is one piece of building. Each st
 
 These estimates are for full days of work.
 
+### Setup · Your agentic development environment (half a day)
+- **What works:** cmux, Berth and their MCP servers, installed by your agent from the prompt in `README.md`. From then on, every session you start is a row in Berth.
+- **Done:** your agent's checks in `SETUP.md` all pass, and the chat you're in shows up in Berth.
+
 ### Course 00 · Meet your harness (half a day)
 - **Lesson 1:** you read the harness's map, predict which file controls three behaviours, and check.
 - **Lesson 2:** you move one of the tutor's settings (a slider), predict how the next lesson changes, and compare.

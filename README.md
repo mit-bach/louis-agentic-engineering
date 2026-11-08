@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.1, a preview (2026-11-07).**
+**From Dominik, for Louis. Version 0.2, a preview (2026-11-07).**
 
 This is a project, and a setup for learning. You'll build a small online store:
 - **Its backend you write yourself, by hand.**
@@ -12,8 +12,28 @@ It's built to grow three things:
 2. your agentic engineering technicals;
 3. a feel for what an **agent-first product** is, and for **managing a harness** the way an experienced agentic engineer does.
 
+## Start here: one prompt sets up your environment
+
+You'll work the way Dominik does every day:
+- **cmux,** a terminal app built for running many agent sessions;
+- **Berth,** a catalog of all your sessions, with an MCP server so agents can start and run other agents;
+- **cmux-mcp,** which lets one agent see and type into another's pane.
+
+Your agent installs them for you, one step at a time, and explains each step as it goes.
+
+1. **Clone this repository somewhere it can stay for good,** such as `~/louis-agentic-engineering`. Don't put it in Downloads, Desktop, Documents or iCloud.
+2. **Open that folder in your terminal,** and start Claude Code with `claude`.
+3. **Send it this:**
+
+```text
+I'm Louis. Dominik gave me this repository to learn agentic engineering, and you're running inside my clone of it. Set up my development environment: read SETUP.md all the way through and do what it says, one stage at a time. I'm new to this, so explain each step in plain words before you do it, show me dry runs first, and ask me before you change anything on my Mac.
+```
+
+You'll need access to Dominik's Berth kit repository for this. If you don't have it yet, send Dominik your GitHub username first.
+
 ## What's in this version
 
+- **[`SETUP.md`](SETUP.md):** your agent's setup steps. Stage 1 (cmux, Berth and the MCP servers) works now. The tutor harness and the store follow in the next versions.
 - **[`ROADMAP.md`](ROADMAP.md):** the whole plan. It covers what you build and in what order, what you write versus what your agents do, and how you check each step yourself.
 - **[`OPTIONAL-SPECS.md`](OPTIONAL-SPECS.md):** extra tasks you can pick from once the main path is done, or alongside it.
 - **[`harness/`](harness/):** the rulebook and the two lesson formats of your tutor harness. Read them now; don't install them yet. Start with [`harness/HARNESS.md`](harness/HARNESS.md), then [`harness/CLAUDE.md`](harness/CLAUDE.md).
@@ -34,19 +54,12 @@ These parts aren't in this version yet. Each one gets tested before you get it.
   - the transcript reader;
   - the first course, "Meet your harness".
 
-**So for now, read. Don't install anything.**
+**So for now: set up your environment with the prompt above, then read.**
 
 ## What to do now
 
-1. **Read `ROADMAP.md`,** start to finish.
-2. **Before you open `harness/CLAUDE.md`, make one prediction.** Write down which file you think decides what a tutor does when you say a lesson was bad. Then read `harness/HARNESS.md` and `harness/CLAUDE.md`, and check your guess. Predicting first, then checking, is the habit this whole project trains.
-3. **Write down every question,** and everything that's unclear. Send them to Dominik.
-4. **Check that you have these:**
-   - a Mac with Claude Code;
-   - git;
-   - Python 3.12 or newer;
-   - Docker Desktop;
-   - a GitHub account.
-
-   The first milestone gives exact install steps for anything that's missing.
-5. **Send Dominik your GitHub username,** so he can give you access to the repos.
+1. **Run the setup prompt above,** and finish stage 1.
+2. **Read `ROADMAP.md`,** start to finish.
+3. **Before you open `harness/CLAUDE.md`, make one prediction.** Write down which file you think decides what a tutor does when you say a lesson was bad. Then read `harness/HARNESS.md` and `harness/CLAUDE.md`, and check your guess. Predicting first, then checking, is the habit this whole project trains.
+4. **Write down every question,** and everything that's unclear. Send them to Dominik.
+5. **For the store, later, you'll also need Docker Desktop.** Its first milestone gives the exact install steps.
