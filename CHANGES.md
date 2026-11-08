@@ -1,5 +1,11 @@
 # Changes
 
+## 0.3.0 · 2026-11-07 · Berth comes with it
+
+- **New:** `vendor/berth-kit-3.0.0.zip` and its `.sha256`. It's the Berth kit, version 3.0.0, in an edition made for you, with the same Berth and cmux-mcp. Stage 1 of `SETUP.md` now works from start to finish.
+- **`SETUP.md`:** stage 1 checks the zip with `shasum -a 256 -c`, unzips it to `~/berth-kit`, and reads the kit's `VERSION`.
+- **Still to come:** the tutor harness install (stage 2), the store kit (stage 3), and "Meet your harness".
+
 ## 0.2.2 · 2026-11-07 · Your harness runs on Berth
 
 - **`harness/CLAUDE.md`:** the keeper starts each course's tutor through `new-course`, as a Berth session in that course's folder, never elsewhere or by forking. It lists and files your sessions, and waking, sleeping and closing them stay your calls. The rulebook is still under its 1,500-word budget.

@@ -27,7 +27,7 @@ After that come Louis's tutor harness and his store project.
    - git is there (`git --version`);
    - uv is installed (`uv --version`), or Python 3.12 itself (`python3.12 --version`). The Berth installer needs one of the two, and Python 3.13 alone isn't enough. If neither is there, leave it: the Berth kit's onboarding installs uv once he says yes, and uv fetches Python 3.12 itself.
 2. **Check where this repository lives.** It has to stay in one place for good, such as `~/louis-agentic-engineering`. If it's in Downloads, Desktop, Documents or iCloud, ask him to move it first.
-3. **Check that the Berth kit came with this repository:** `ls vendor/berth-kit-*.zip`. If it's missing, stop and tell him this version doesn't include it yet.
+3. **Check that the Berth kit came with this repository:** `ls vendor/berth-kit-*.zip`. If it's missing, stop and tell him this copy of the repository is incomplete.
 4. **Don't install anything in this stage.**
 
 ## Stage 1 · cmux, Berth and their MCP servers
@@ -36,9 +36,9 @@ These come from the Berth kit, an edition made for him, which ships inside this 
 
 1. **He installs cmux himself.** He downloads it from https://cmux.com, drags it into Applications, and opens it once. Wait until he says it's open.
 2. **Unpack the Berth kit where it will live for good,** because everything it installs runs from that folder:
-   - check the zip against its `.sha256` file in `vendor/`, and stop if it doesn't match;
-   - unzip it so its top folder becomes `~/berth-kit`;
-   - tell him the version, from the kit's `CHANGELOG.md`.
+   - check the zip against its checksum file. Run `shasum -a 256 -c berth-kit-3.0.0.zip.sha256` from inside `vendor/`, and stop if it doesn't print `OK`;
+   - unzip it into his home folder, so its top folder becomes `~/berth-kit`. If `~/berth-kit` already exists, stop and ask him;
+   - tell him the version, from `~/berth-kit/VERSION`. The kit's own onboarding then checks every file against its `MANIFEST.txt`.
 3. **Hand him to the kit's own onboarding.** Read the "cmux" section of `~/berth-kit/README.md`, and give him its steps 3 and 4 exactly:
    - in cmux, open a workspace;
    - `cd ~/berth-kit` and start `claude`;
