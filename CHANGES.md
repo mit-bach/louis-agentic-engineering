@@ -1,5 +1,10 @@
 # Changes
 
+## 0.7.4 · 2026-11-08 · Store milestone M4
+
+- **The store kit** now has M4: orders, checkout in one transaction, the race and the deadlock test, two agents racing for one unit, and your first audit of your harness. You get it with `make update` in `~/code/store`.
+- **`ROADMAP.md`:** M4 takes about 2 days.
+
 ## 0.7.3 · 2026-11-08 · Store milestone M3
 
 - **The store kit** now has M3: visitor sessions, the cart, shopping agents, and your reviewer as a skill in your tutor harness. You get it with `make update` in `~/code/store`.

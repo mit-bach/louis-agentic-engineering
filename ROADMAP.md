@@ -164,7 +164,7 @@ These estimates are for full days of work.
   - quantity 0 is refused;
   - adding the same product twice sets its quantity, rather than adding a second line.
 
-### M4 · Checkout, and two buyers at once (1.5 days)
+### M4 · Checkout, and two buyers at once (2 days)
 - **You write:** checkout, as one transaction:
   - lock the products involved;
   - check that every line has enough stock;
