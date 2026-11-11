@@ -1,6 +1,6 @@
 # Agentic engineering, from a store up
 
-**From Dominik, for Louis. Version 0.8.0 (2026-11-11).**
+**From Dominik, for Louis. Version 0.8.1 (2026-11-11).**
 
 ## Paste this into Claude Code
 

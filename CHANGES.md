@@ -1,5 +1,9 @@
 # Changes
 
+## 0.8.1 · 2026-11-11 · Two optional specs, ready to build
+
+- **`OPTIONAL-SPECS.md`:** specs 14 (your own migration runner) and 15 (errors the browser can read) are full guides in the store kit's `optional/` folder, each checked with `make spec S=<n>`.
+
 ## 0.8.0 · 2026-11-11 · The whole store course is out
 
 - **The store kit** now has M6: your orders, the spec you write, the frontend your agent builds from it, the walkthrough by hand, and the no-spec control. All six milestones are in. You get it with `make update` in `~/code/store`.

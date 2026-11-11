@@ -1,6 +1,8 @@
 # Optional specs
 
-Pick any of these, in any order, once the main path is done or alongside it. Each will come as a short spec in the same shape: a goal, a contract and a check. For now, each line says what it is and how you'll know it works.
+Pick any of these, in any order, once the main path is done or alongside it. Each line says what it is and how you'll know it works.
+
+**Ready as full guides, with checks,** in the store kit's `optional/` folder: 14 and 15. Check one with `make spec S=<n>` in `~/code/store`. The rest are ideas for now; ask your tutor to build a course around one when you want it.
 
 1. **Session cleanup.** Expired sessions are deleted on a schedule.
    - *Works when:* orders survive the cleanup, and carts don't.
@@ -28,7 +30,7 @@ Pick any of these, in any order, once the main path is done or alongside it. Eac
     - *Needs:* an AWS account, and it costs money.
 13. **A race-runner subagent.** A subagent runs the race test and its control, and reports back in three lines.
     - *Works when:* you can say what it saw that your main session didn't, and the other way round.
-14. **Your own migration runner.** A `migrate.py` that records which migrations have run, with a checksum for each, and refuses to run when an applied file was edited afterwards. It's the classic way of keeping a database's schema in step with its code.
+14. **Your own migration runner** (ready: `optional/14-your-own-migration-runner.md`). A `migrate.py` that records which migrations have run, with a checksum for each, and refuses to run when an applied file was edited afterwards. It's the classic way of keeping a database's schema in step with its code.
     - *Works when:* new files apply once, in order; an edited old file stops it with a clear message; two runs at once can't both apply the same file.
-15. **Errors the browser can read.** When your API answers with a 500, the browser can't read its body, because the error handler sits outside the CORS layer. Move it inside, so every error reaches the page as its message.
+15. **Errors the browser can read** (ready: `optional/15-errors-the-browser-can-read.md`). When your API answers with a 500, the browser can't read its body, because the error handler sits outside the CORS layer. Move it inside, so every error reaches the page as its message.
     - *Works when:* a 500 from your API shows its one-line message on the page, not a blank network error.
