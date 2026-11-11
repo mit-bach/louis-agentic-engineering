@@ -206,7 +206,7 @@ These estimates are for full days of work.
   - the tool check passes: every customer and admin action has a tool;
   - your eval scores, before and after, are in your journal.
 
-### M6 · The frontend, built by your agent (1 day)
+### M6 · The frontend, built by your agent (2 days)
 - **You write the spec first:**
   - each page;
   - what it calls;
@@ -237,7 +237,7 @@ These estimates are for full days of work.
   - the two-window test;
   - three questions answered without notes.
 
-**About 12 working days in all.**
+**About 13 working days in all.**
 
 ---
 

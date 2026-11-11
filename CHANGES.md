@@ -1,5 +1,11 @@
 # Changes
 
+## 0.8.0 · 2026-11-11 · The whole store course is out
+
+- **The store kit** now has M6: your orders, the spec you write, the frontend your agent builds from it, the walkthrough by hand, and the no-spec control. All six milestones are in. You get it with `make update` in `~/code/store`.
+- **`ROADMAP.md`:** M6 takes about 2 days, so the course is about 13 working days.
+- **`OPTIONAL-SPECS.md`:** a new spec, errors the browser can read.
+
 ## 0.7.6 · 2026-11-10 · Store milestone M5
 
 - **The store kit** now has M5:

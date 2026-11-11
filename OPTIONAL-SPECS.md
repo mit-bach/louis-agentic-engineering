@@ -30,3 +30,5 @@ Pick any of these, in any order, once the main path is done or alongside it. Eac
     - *Works when:* you can say what it saw that your main session didn't, and the other way round.
 14. **Your own migration runner.** A `migrate.py` that records which migrations have run, with a checksum for each, and refuses to run when an applied file was edited afterwards. It's the classic way of keeping a database's schema in step with its code.
     - *Works when:* new files apply once, in order; an edited old file stops it with a clear message; two runs at once can't both apply the same file.
+15. **Errors the browser can read.** When your API answers with a 500, the browser can't read its body, because the error handler sits outside the CORS layer. Move it inside, so every error reaches the page as its message.
+    - *Works when:* a 500 from your API shows its one-line message on the page, not a blank network error.
