@@ -191,7 +191,7 @@ These estimates are for full days of work.
   3. **The control:** you remove your lock, predict, run the race again, write down what happened and why, and put the lock back.
   4. **The deadlock test:** two carts hold the same two products, added in opposite orders, and check out together for 20 rounds with no errors.
 
-### M5 · Agent-first, for real (1.5 days)
+### M5 · Agent-first, for real (2 days)
 - **You write:**
   - **Checkout that's safe to repeat.** A repeated request with the same key returns the first order, instead of placing a second.
   - **Errors returned to agents as clear messages.**
@@ -237,7 +237,7 @@ These estimates are for full days of work.
   - the two-window test;
   - three questions answered without notes.
 
-**About 11 to 12 working days in all.**
+**About 12 working days in all.**
 
 ---
 
